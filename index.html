@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Product Showcase | Space Edition</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <h2>LOADING EXPERIENCE</h2>
+      <p>Preparing your journey through space...</p>
+    </div>
+  </div>
+
+  <!-- 3D Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">◆</span>
+      <span class="logo-text">STELLAR</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active" data-product="0">NOVA</a>
+      <a href="#" class="nav-link" data-product="1">ORBIT</a>
+      <a href="#" class="nav-link" data-product="2">NEBULA</a>
+    </div>
+  </nav>
+
+  <!-- Product Info Panel -->
+  <div id="product-info">
+    <div class="product-tag">NEW ARRIVAL</div>
+    <h1 class="product-title" id="product-title">NOVA X1</h1>
+    <p class="product-subtitle" id="product-subtitle">Next-Gen Quantum Device</p>
+    <p class="product-description" id="product-description">
+      Experience the future of technology with our flagship quantum processor.
+      Engineered for the cosmos, built for you.
+    </p>
+    <div class="product-specs">
+      <div class="spec">
+        <span class="spec-value" id="spec-1-val">12 THz</span>
+        <span class="spec-label" id="spec-1-lbl">Processing</span>
+      </div>
+      <div class="spec">
+        <span class="spec-value" id="spec-2-val">0.3 nm</span>
+        <span class="spec-label" id="spec-2-lbl">Precision</span>
+      </div>
+      <div class="spec">
+        <span class="spec-value" id="spec-3-val">∞</span>
+        <span class="spec-label" id="spec-3-lbl">Possibilities</span>
+      </div>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-primary">EXPLORE</button>
+      <button class="btn btn-secondary">SPECS ↗</button>
+    </div>
+  </div>
+
+  <!-- Product Switcher Dots -->
+  <div id="product-dots">
+    <button class="dot active" data-product="0"></button>
+    <button class="dot" data-product="1"></button>
+    <button class="dot" data-product="2"></button>
+  </div>
+
+  <!-- Scroll Hint -->
+  <div id="scroll-hint">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <span>Drag to rotate</span>
+  </div>
+
+  <!-- Three.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
